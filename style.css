@@ -1,0 +1,296 @@
+/* 🟢 Google Noto Sans KR 폰트를 @import 형식으로 추가합니다. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 기본 글꼴 및 링크 스타일 */
+body {
+    /* Noto Sans KR 폰트 적용 */
+    font-family: 'Noto Sans KR', sans-serif; 
+    line-height: 1.6;
+    color: #333; /* 기본 글자색 */
+    background-color: #fff; /* 배경색 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* 링크 색상을 부모 요소와 동일하게 */
+}
+
+/* --- 헤더 스타일 --- */
+.header {
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    background-color: #fff;
+    border-bottom: 1px solid #eee; /* 구분선 */
+}
+
+.header-inner {
+    max-width: 1200px; /* 최대 너비 설정. 원하는 너비로 수정 가능 */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 16px; /* 제목/로고 글자 크기 */
+    font-weight: bold;
+}
+
+.user-actions {
+    display: flex;
+    gap: 15px; /* 항목 간 간격 */
+    font-size: 12px; /* 링크 글자 크기 */
+    /* 아이콘 버튼 스타일 */
+    .search-btn, .menu-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+    }
+}
+
+/* --- 메인 콘텐츠 스타일 --- */
+.main-content {
+    max-width: 1200px; /* 최대 너비 설정. 원하는 너비로 수정 가능 */
+    margin: 0 auto;
+    padding: 40px 20px 80px; /* 상, 좌우, 하 패딩 */
+}
+
+/* 스튜디오 소개 섹션 */
+.intro-section {
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.studio-name {
+    font-size: 80px; /* 스튜디오 이름 글자 크기. 이미지와 유사하게 조절 */
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.about-link {
+    display: inline-block;
+    font-size: 14px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+}
+
+/* 메인 이미지 섹션 */
+.main-image-section {
+    margin-bottom: 60px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+}
+
+.view-all-link {
+    font-size: 14px;
+    border-bottom: 1px solid #666;
+}
+
+/* 🟢 컨테이너 안에 있는 이미지 스타일 (메인 이미지) */
+.image-with-overlay {
+    position: relative;
+    width: 100%;
+    /* 가로세로 비율 조정 주석: 필요에 따라 padding-bottom 값을 조정하여 높이를 설정하세요. */
+    padding-bottom: 65%; /* 이미지 가로세로 비율(예: 100% / 150%) */
+    overflow: hidden;
+}
+
+.image-with-overlay img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지가 영역을 꽉 채우도록 설정 */
+    display: block;
+}
+
+.overlay-box {
+    position: absolute;
+    /* 오버레이 박스 위치 설정: 이미지에서 오른쪽 위로 조절 */
+    top: 10%;
+    right: 5%;
+    width: 250px; /* 박스 너비 */
+    height: 150px; /* 박스 높이 */
+    background-color: rgba(255, 255, 255, 0.9); /* 배경색과 투명도 */
+    border: 1px solid #333;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.overlay-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mot-text {
+    font-size: 28px;
+    letter-spacing: 5px; /* 글자 간격 조절 */
+}
+
+.wave-line {
+    width: 80%;
+    height: 1px;
+    background: #333; /* 검은색 선 */
+}
+
+.dam-text {
+    font-size: 36px;
+    line-height: 1;
+}
+
+.my-name{
+    position: absolute;
+    /* '@potterim_' 텍스트를 오른쪽 세로로 배치하기 위한 설정 */
+    bottom: 5px;
+    right: -10px;
+    font-size: 10px;
+    transform: rotate(90deg);
+    transform-origin: 100% 100%; /* 오른쪽 하단 기준 회전 */
+}
+
+
+/* 작품 목록 섹션 */
+.work-list-section {
+    display: flex;
+    /* 3개의 카드가 동일한 너비를 갖고 나란히 배치됩니다. */
+    gap: 30px; /* 작품 카드 간 간격 */
+}
+
+.work-card {
+    flex: 1; /* 세 카드가 동일한 너비를 갖도록 */
+    text-align: left;
+}
+
+/* 🟢 이미지 크기(가로/세로)를 동일하게 만드는 컨테이너 */
+.work-image-container {
+    width: 100%;
+    /* 가로 대비 100%의 높이를 설정하여 정사각형(1:1) 비율을 만듭니다. 
+       원하는 다른 비율(예: 4:3)을 원하면 75%로 수정하세요. */
+    padding-bottom: 100%; 
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px; /* 제목과의 간격 */
+}
+
+/* 🟢 컨테이너 안에 있는 이미지 스타일 */
+.work-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지가 잘리지 않고 전체가 보이도록 */
+    display: block;
+}
+
+.work-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.work-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.work-link {
+    font-size: 14px;
+    color: #666;
+    border-bottom: 1px solid #666;
+    padding-bottom: 2px;
+}
+
+/* --- 푸터 스타일 --- */
+.footer {
+    padding: 40px 0;
+    background-color: #f7f7f7; /* 배경색 */
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-inner {
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center; /* 푸터 내용 중앙 정렬 */
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.studio-name-footer {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+/* --- 반응형 디자인 (선택 사항) --- */
+/* 화면 너비가 768px 이하일 때 적용될 스타일 */
+@media (max-width: 768px) {
+    .studio-name {
+        font-size: 50px; /* 모바일에서 글자 크기 줄이기 */
+    }
+
+    .work-list-section {
+        flex-direction: column; /* 모바일에서 작품 카드를 세로로 쌓기 */
+        gap: 40px;
+    }
+
+    .overlay-box {
+        width: 180px; /* 모바일에서 박스 크기 줄이기 */
+        height: 120px;
+        right: 2%; /* 위치 조정 */
+    }
+
+    .mot-text {
+        font-size: 20px;
+    }
+
+    .dam-text {
+        font-size: 28px;
+    }
+}
